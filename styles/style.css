@@ -82,8 +82,6 @@
 /* /Header */
 
 /* Main */
-
-/* Section 1# */
 .description{
   margin: 100px 100px;
   width: 80%;
@@ -127,7 +125,7 @@
 }
 
 
-/* Section2# */
+/* Section ONE */
 .digits{
   padding: 100px auto 100px auto;
   display: flex;
@@ -141,7 +139,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: red 1px solid;
 }
 
 .section__title{
@@ -166,12 +163,10 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  border: red 1px solid;
 }
 
 .table__cell{
   width: 230px;  /*Si coloco el width 250px  los cuadros no se colocan el fila de 4 lineas :c */                         
-  border: 1px solid red;
   margin-bottom: 60px;
 }
 
@@ -194,29 +189,44 @@ list-style: none;
   margin-top: 20px;
 }
 
-/* Section 2 */
-
+/* Section TWO */
 .feynman{
-  margin-top: 100px;
+  height: 790px;
+  padding-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: #2F80ED solid 1px;
+  justify-content: flex-start;
   position: relative;
 }
 
 .feynman__title{
+  /* display: flex; Queria usar display flex para centrar el texto en su contenedor <h> que mide 775px pero no funciono :x 
+  align-self: center; */
+  padding-left: 360px; /* Use un padding left para correr el elemento y centrarlo de manera manual*/
   width: 775px;
   line-height: 1.15;
   font-size: 120px;
   font-weight: bold;
-  left: 50px;
+  margin-bottom: 70px;
 }
 
 .feynman__subtitle{
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  padding-left: 150px; /* Lo mismo no logro centrar los elementos con flex y uso el pading para hacerlo manual :p*/
 }
 
 .feynman__link{
+  position: absolute;
+  right: 48px;
+  top: 50%;
+  color: #2F80ED;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  text-decoration: none;
 }
 
 .feynman__image{
