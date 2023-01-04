@@ -129,12 +129,10 @@
 
 /* Section2# */
 .digits{
-  margin: 100px auto 100px auto;
+  padding: 100px auto 100px auto;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
 }
 
 
@@ -143,10 +141,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: red 1px solid;
 }
 
 .section__title{
-  margin-top: 60px;
   width: 60%;
   margin-bottom: 20px;
   line-height: 1.15;
@@ -165,15 +163,15 @@
 .table{
   width: 1100px;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
+  border: red 1px solid;
+  
 }
 
 .table__cell{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  width: 250px; 
   border: 1px solid red;
-  margin-right: 30px;
 }
 
 .table__heading{
@@ -181,12 +179,14 @@ margin-bottom: 20px;
 line-height: 1.15;
 font-size: 24px;
 font-weight: bold;
+list-style: none;
 }
 
 .table__text{
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
+  list-style: none;
 }
 
 /* Section 2 */
