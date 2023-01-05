@@ -17,8 +17,10 @@
   min-height: 600px;
   max-height: 756px;
   display: flex; 
+  background-color: #F2F2F2;
+  margin-bottom: 100px;
+  position: relative;
 }
-
 .logo {
   z-index: 1;
   width: 154px;
@@ -41,7 +43,7 @@
   justify-content: start;
   align-self: center;
   z-index: 1;
-  padding-bottom: 150px;
+  padding-bottom: 170px; /* pading para poder centrar el elemento de manera vertical */
   }
 
 .header__subtitle{
@@ -57,10 +59,11 @@
 
 .link{
   color: #2F80ED;
+  text-decoration: none;
 }
 
 .header__main-illustration{
-  height: 608px;
+  height: 608px; /* Use las dimenciones dadas en la guia pero siento  que el recuadro azul es mucho mas grande que en la guia*/
   width: 765px;
   position: absolute;
   right: 0;
@@ -83,54 +86,41 @@
 
 /* Main */
 .description{
-  margin: 100px 100px;
-  width: 80%;
-  min-width: 784px;
-  display: flex;
-  border: 1px solid red;
-  flex-direction: row;
-  justify-content: space-between;
+  
 } 
 
 .two-columns{
-  width: 175px;
-
+  border: 1px red solid;
+  margin-top: 100px; /*entiendo que puedo agregar un margin y asignar valores suguiendo la aguja de el relod. pero cuando se trata de top y bootom como los asigno? */
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 
 .two-columns__brief{
-  font-size: 18px;
-  line-height: 1.2;
-  font-weight: normal;
-  color: #2F80ED;
-}
+  }
 
 .two-columns__main-text{
-  border: 1px solid red;
-  display: flex;
-  flex-direction: column;
+  border: 1px red solid;
 }
 
 .two-columns__paragraph{
-  font-size: 24px;
-  line-height: 34px;
-  font-weight: normal;
-  column-gap: 30px;
+  
 }
 
 .two-columns__span-accent{
-  line-height: 34px;
-  font-size: 24px;
-  font-weight: bold;
+  
 }
 
 
 /* Section ONE */
 .digits{
-  padding: 100px auto 100px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 100px auto 100px auto;
 }
 
 
@@ -226,7 +216,6 @@ list-style: none;
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
-  text-decoration: none;
 }
 
 .feynman__image{
@@ -237,6 +226,65 @@ list-style: none;
   left: 0;
   bottom: 0;
 }
+
+/* THRE SECTION */
+.kaufman{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: #1F1F1F;
+  background-size: cover;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.section-title{ /* intente de varias maneras pero no logro centrar el texto dentro de el bloque h2 */
+  margin-top: 90px;
+  width: 60%;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: bold;
+  color: white;
+}
+
+.section-subtitle{ /* mismo problema no logro centrar los elementos de el bloque h3 use display flex y otros :c*/
+  margin-top: 20px;
+  width: 60%;
+  line-height: 34px;
+  font-size: 60px;
+  font-weight: normal;
+  color: white;
+}
+
+.theme_dark_cell{
+  width: 175px;
+}
+
+.theme_dark_heading{
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.theme_dark_text{
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  color: white;
+}
+
+.kaufman__triangle{
+  z-index: -1;
+  width: 660px;
+  height: 636px;
+  position: absolute;
+  right: -100px;
+}
+
+/* Siento que use mas codigo de el que deberia haber usado agregando mas modificadores en esta seccion. existia alguna forma de simplificar aun mas
+esta parte con los modificadores? salu2s/*
 
 /* Footer */
 .footer{
