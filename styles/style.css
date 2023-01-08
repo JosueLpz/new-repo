@@ -8,6 +8,8 @@
   max-width: 1600px;
   margin: 0 auto;
   font-family: 'Helvetica Neue', Arial, sans-serif;
+  /* background-color: #F2F2F2; */
+  z-index: -10;
 }
 
 /* Header */
@@ -86,49 +88,59 @@
 
 /* Main */
 .description{
-  
+  margin-bottom: 100px;
 } 
 
 .two-columns{
-  border: 1px red solid;
-  margin-top: 100px; /*entiendo que puedo agregar un margin y asignar valores suguiendo la aguja de el relod. pero cuando se trata de top y bootom como los asigno? */
+  margin-top: 100px; /*entiendo que puedo agregar un margin y asignar valores suguiendo la aguja de el relod. en una sola linea de cosigo pero cuando se trata de top y bootom como los asigno? */
   margin-bottom: 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: baseline;
+  justify-content: center;
 }
 
-
 .two-columns__brief{
+  width: 175px;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  color: #2F80ED;
   }
 
 .two-columns__main-text{
-  border: 1px red solid;
+  width: 80%;
+  min-width: 784px;
 }
 
 .two-columns__paragraph{
-  
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  margin-bottom: 30px;
 }
 
 .two-columns__span-accent{
-  
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: bold;
 }
-
 
 /* Section ONE */
 .digits{
+  margin-bottom: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 100px auto 100px auto;
 }
 
-
 .section{
-  width: 60%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .section__title{
@@ -137,14 +149,18 @@
   line-height: 1.15;
   font-size: 60px;
   font-weight: bold;
+  display: flex;
+  justify-content: center;
 }
 
-.section__subtitle{  /* No logro centrarlo justo debajo de el title :c*/
+.section__subtitle{
   width: 60%;
   margin-bottom: 60px;
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
+  display: flex;
+  justify-content: center;
 }
 
 .table{
@@ -175,25 +191,28 @@ list-style: none;
   list-style: none;
 }
 
-.table__text_spam{  /*No Funciono mi etiqueta spam para agregar una dustancia de 20px, <br> para agregar esa distancia pero es inexacta!*/
+.table__text_spam{  /*No Funciono mi etiqueta spam para agregar una dustancia de 20px, use <br> para agregar esa distancia pero no es 20px "creo"!*/
   margin-top: 20px;
 }
 
 /* Section TWO */
+
 .feynman{
   height: 790px;
-  padding-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   position: relative;
 }
 
 .feynman__title{
-  /* display: flex; Queria usar display flex para centrar el texto en su contenedor <h> que mide 775px pero no funciono :x 
-  align-self: center; */
-  padding-left: 360px; /* Use un padding left para correr el elemento y centrarlo de manera manual*/
+  /*Queria usar display flex para centrar el texto en su contenedor <h2> pero no funcionaron los comandos de abajo */
+  display: flex;
+  justify-content: center;
+  /*improvisacion*/
+  padding-left: 250px;
+  /* Use un padding left para correr el elemento y centrarlo de manera manual*/
   width: 775px;
   line-height: 1.15;
   font-size: 120px;
@@ -205,7 +224,6 @@ list-style: none;
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
-  padding-left: 150px; /* Lo mismo no logro centrar los elementos con flex y uso el pading para hacerlo manual :p*/
 }
 
 .feynman__link{
@@ -216,6 +234,7 @@ list-style: none;
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
+  text-decoration: none;
 }
 
 .feynman__image{
@@ -237,24 +256,30 @@ list-style: none;
   background-size: cover;
   z-index: -2;
   overflow: hidden;
+  padding-bottom: 90px;
 }
 
-.section-title{ /* intente de varias maneras pero no logro centrar el texto dentro de el bloque h2 */
+.section-title{
   margin-top: 90px;
   width: 60%;
   line-height: 1.15;
   font-size: 60px;
   font-weight: bold;
   color: white;
+  /* intente de varias maneras pero no logro centrar el texto dentro de el bloque h2 */
+  display: flex;
+  justify-content: center;
 }
 
-.section-subtitle{ /* mismo problema no logro centrar los elementos de el bloque h3 use display flex y otros :c*/
+.section-subtitle{
   margin-top: 20px;
   width: 60%;
   line-height: 34px;
-  font-size: 60px;
+  font-size: 24px;
   font-weight: normal;
   color: white;
+  display: flex;
+  justify-content: center;
 }
 
 .theme_dark_cell{
@@ -289,5 +314,78 @@ esta parte con los modificadores? salu2s/*
 /* Footer */
 .footer{
   min-height: 350px;
+  background-color: #1F1F1F;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
 }
 
+.footer__columns{
+  width: 90%;
+  min-height: 350px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  display: flex;
+}
+
+.footer__colum_content-copyright{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 711px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo place-footer{
+  width: 183px;
+  height: 35px; 
+}
+
+.footer__author{
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 170px; /* use en el bloque padre justify-content-space-bew. y separo los elementos pero no logro centrar este con flex asi que uso un margin hasta ajustar la alutura :)*/
+  color: white;
+}
+
+.footer_colum_content-footer-b{
+  display: flex;
+  flex-direction: row;
+  flex-basis: 711px;
+  justify-content: space-around;
+}
+
+.footer__column-heading{
+  margin-bottom: 20px;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.footer__list{
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0;
+  list-style: none;
+  color: white;
+}
+
+.footer__colum_social{
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__colum-link{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.footer__social-icons{
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
